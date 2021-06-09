@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        #custom {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+        }
+
+            #custom p {
+                margin-left: 5px;
+                padding:5px;
+            }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+        @media only screen and (max-width:600px) {
+            #container img {
+                width: 100%;
+            }
+
+            #container iframe {
+                width: 100%;
+                height: 360px;
+            }
+
+            #container #customm #note #noteText {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            #overview img {
+                width: 89%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <h1 id="title">Creating Collections Using MongoDB</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create 2 collections (for storing data) using MongoDB shell (command line interface).</p>
+            <div id="custom">
+                <h2 style="text-align:center;"><b>What is a Collection in MongoDB?</b></h2>
+                <p style="text-align:center;">To understand this, let's take a look at the structure of MongoDB:</p>
+                <center><img src="mongoDB.jpeg" style="margin:5px auto; height:350px; border-radius:15px;" /></center>
+                <p style="text-align:center;">As you can see, every MongoDB is divided into many collections which in turn can contain many documents. Documents are the real deal. They contain our data in json format. That is, key:value pairs. Whereas, collections allow us to segregate that data and structure them properly.</p>
+                <p style="text-align:center;">For example, let's say 'users' database has to store users from across the world. That means it has to  store users from India, China, USA etc. Storing all of them in one place can cause confusion. To avoid this, the user data can be stored separately based on the country they are from using collections.</p>
+                <p style="text-align:center;">To create MongoDB documents (the data), we first have to create a collection for storing those documents.</p>
+            </div>
+            <ul>
+            </ul>
+        </div>
+
+
+
+
+        <div id="overview">
+            <h2>How to Create Collections using MongoDB?</h2>
+            <p>Follow the instructions given below:</p>
+
+            <ol>
+
+                <li>Using <pre style="display:inline;">Windows + R</pre> keys and typing 'mongo', access the mongo shell.</li>
+
+                <li>MongoDB console (Mongo Shell to be more precise) will open up as shown below. </li>
+                <img src="mongo1.jpg" style="margin-top:5px" />
+
+
+                <li>Clear the screen (using 'cls' command) so that you can begin without any distraction.</li>
+
+                <li>In the blank screen, create a new database using mongodb command: <code style="font-size:20px;">use users</code> </li>
+                <ul>
+                    <li>This will create a new database called 'users' and MongoDB gets 'switched to db users' now. </li>
+                    <li>You can also check whether 'users' is indeed your current database by typing <code style="font-size:20px;">db</code> </li>
+                    <img src="mongo3.jpg" style="margin-top: 5px;margin-left:10px; " />
+                    <li><code style="font-size:20px;">db</code> always refers to your current database. You will use this command regularly. </li>
+                </ul>
+
+                <li>To create a new collection in 'users' db, you should use: <code style="font-size:20px;">createCollection()</code>command as follows:</li>
+                <ul>
+                    <li><img src="mongo4.jpg" style="margin-top: 5px;margin-left:10px; " /></li>
+                    <li>This will create a collection called 'india' in which we can store info related to indian users as documents.</li>
+                    <li>Ok message gets displayed if your collection was created successfully.</li>
+                </ul>
+                <li>Now to check whether the collection was created successfully, you can use the following command: </li>
+                <ul>
+
+                    <li><img src="mongo5.jpg" style="margin-top: 5px;margin-left:10px; " /> </li>
+                    <li><code style="font-size:20px;">show collections</code> lists all the collections within the database currently in use.</li>
+                    <li>Create another collection on your own by following the same process.</li>
+                </ul>
+
+
+
+            </ol>
+
+
+
+
+
+
+        </div>
+
+        <h1 style="text-align: center;">Creating Collections Using MongoDB</h1>
+        <div id="customm">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/560309332" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>
+

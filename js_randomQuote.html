@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Display Random Quote Using JavaScript</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to select a quote from a list of available quotes and display it on the browser when the user clicks the 'Get Quote' button.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>Div to display the selected quote on screen</li>
+                <li>Button to trigger the display quote operation.</li>
+                <li>Array to store the list of quotes</li>
+                <li>Math.random() to randomly select a quote from the available list of quotes.</li>
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How to Design our Simple Program?</h2>
+            <p>Our html should look something like this:</p>
+            <img src="js_RandomQuote.jpg" style="border-radius:4px;"/>
+            <p>Here's the html code to recreate what's shown in the image above along with the required CSS.</p>
+
+            <img src="js_randomQuoteHTML.jpg" style="border-radius:15px;"/>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="note.png" />
+            </div>
+            <div id="noteText">
+                ID attributes help us grab the html elements and manipulate them in javascript. ID display grabs the div. ID button grabs the button. As usual, an event listener is associated with the button that fetches the quote and displays it on the screen whenever the button gets clicked.  
+            </div>
+        </div>
+
+
+
+        <div id="overview">
+            <h2>How to Generate the Random Quote using Javascript?</h2>
+            <p>Include your javascript code within <span>&ltscript&gt</span> <span>&lt/script&gt</span> tags just before <span>&lt/body&gt</span> tag .</p>
+
+            <ol>
+                <li>First create an array variable called quotes and store within it all your quotes as strings.</li>
+
+                <img src="quotes.jpg" style="margin-top:5px;" />
+
+                <li>Use Math.random() method to generate an index number between 0 and 3 (the length of the quotes array) and then pass it to quotes (as quotes[index number]) variable to randomly generate a quote.</li>
+                <li>Since the above step has to repeated again and again to ensure a quote shows up on screen whenever the user clicks the button, we can enclose it in a function as shown below.</li>
+                <img src="randomfunction.jpg" style="margin-top:5px;" />
+                <p>As you can see, the function generateRandomQuote() picks/returns a random quote from quotes array every time the function runs. We now have to call this function inside the button's event listener. This will ensure that every time the button gets clicked a random quote gets generated.</p>
+                <img src="js_randomQuote1.jpg" style="margin-top:5px;" />
+                <li>Since the generateRandomQuote() function returns a quote, we declare a variable called quote (local to the function) to capture the randomly generated quote.</li>
+                <li>Now all we have to do is render the quote stored within the variable quote on screen. For this, we modify the innerHTML property of the div 'display' (which was previously empty) and assign it the value of the variable quote (the randomly picked quote). </li>
+                
+                <img src="random_quote.jpg" style="margin-top: 5px; border-radius:15px;" />
+            </ol>
+            
+        </div>
+
+        
+        
+        
+
+
+        
+    </div>
+
+
+</body>
+</html>

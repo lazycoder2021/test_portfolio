@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        #custom {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+        }
+
+            #custom p {
+                margin-left: 5px;
+                padding:5px;
+            }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview img{
+            width:100%; 
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <h1 id="title">Different Web REST API Methods</h1>
+        <div id="overview">
+            <p>Rest API(s) dominate the web api space now. Just like the web, they operate using the HTTP protocol. There's a request and response and a resource that can be accessed. We just saw how 'GET' operation can be used to get a resource. But 'operation' is not the right term. The right term is 'method'. </p>
+
+            <p>REST APIs support 4 other such methods: POST, UPDATE, PUT and DELETE.</p>
+
+            <p>While GET method is responsible for getting the details of a resource, other methods do the following:</p>
+            <ul>
+                <li><b>POST</b> - allows the client to post data to the resource.</li>
+                <li><b>UPDATE</b> - allows the client to fully update the resource.</li>
+                <li><b>PUT</b> - allows the client to partially update the resource.</li>
+                <li><b>DELETE </b>- allows the client to delete the resource.</li>
+            </ul>
+        </div>
+        <br />
+
+        <h1 style="text-align:center;">REST API METHODS - EXPLAINED WITH DIAGRAMS</h1>
+        <p style="font-size:18px; margin-left:25px;">Let's continue with the example of how travel websites make use of APIs to understand how REST API methods work</p>
+
+        <h2 style="margin-left:25px;text-align:center;">GET METHOD</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <img src="api_image1.jpg" />
+            <p style="margin-left:10px; text-align:center;"><b>GET method is used to GET a resource</b>.</p>
+            <p style="margin-left:10px; text-align:center;">Pretty self-explanatory. Client 'searches for flights' and gets back 'list of available flights' as response from the server. Behind the scenes, the server contacts the airline service apis for the 'list of flights' data and relays it to the client. </p>
+        </div>
+
+        <h2 style="margin-left:25px; text-align:center;">POST METHOD </h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <img src="api_image2.jpg" />
+            <p style="margin-left:10px; text-align:center;"><b>POST method is used to POST to a resource</b>.</p>
+            <p style="margin-left:10px; text-align:center;">POST involves sending (or posting) of data. Client sends his or her info needed to book a flight to the server and gets back 'flight booked' confirmation message as response. Again, server acts as a medium and interacts with airline service APIs and relays the response to the client.  </p>
+
+        </div>
+
+        <h2 style="margin-left:25px; text-align:center;">UPDATE METHOD </h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <img src="api_image3.jpg" />
+            <p style="margin-left:10px; text-align:center;"><b>UPDATE method is used to FULLY UPDATE to a resource</b>.</p>
+            <p style="margin-left:10px; text-align:center;">UPDATE involves update of already existing or created data. Client rescheduling his or her flight (and maybe changing the number of people involved in the travel)  is a good example for explaining UPDATE method. The already existing client data gets updated (or rewritten) with the new flight details when the client tries to reschedule his or her flight travel.  </p>
+
+        </div>
+
+        <h2 style="margin-left:25px; text-align:center;">PUT METHOD</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <img src="api_image5.jpg" />
+            <p style="margin-left:10px; text-align:center;"><b>PUT method is used to PARTIALLY UPDATE a resource</b>.</p>
+            <p style="margin-left:10px; text-align:center;">PUT is reponsible for making minor updates (unlike UPDATE that performs major overhauls). A good example would be client trying to modify his or her seating location after having booked the flight. Though this might not be possible in reality, this example is just to illustrate the use of PUT method. </p>
+
+        </div>
+
+        <h2 style="margin-left:25px; text-align:center;">DELETE METHOD </h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <img src="api_image4.jpg" />
+            <p style="margin-left:10px; text-align:center;"><b>DELETE method is used to DELETE a resource</b>.</p>
+            <p style="margin-left:10px; text-align:center;">DELETE is reponsible for deleting the resource. Let's say the client wants to cancel the flight. In that case, the DELETE method will be used to delete the record. And the confirmation message dispatched by the airline service will be relayed to the client by the server. </p>
+
+        </div>
+
+        <p style="margin-left:10px; text-align:center;font-size:20px;">In all of the above cases, resource refers to the flight information. </p>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>

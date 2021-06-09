@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Aligning Divs Side By Side</h1>
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>The objective is to create 3 divs with equal height and width and place them next to each other. This sort of arrangment plays a crucial role in creating webpage layouts. </p>
+        </div>
+
+        <div id="overview">
+            <h2>How to Place the Divs Side by Side?</h2>
+            <p>There are 2 ways to achieve this. The best method is to make use of the CSS property called 'flex'.</p>
+
+            <ol>
+                <li>Create a html page (basically a file with .html extension)</li>
+                <li>Add 3 <span>&ltdiv&gt</span> <span>&lt/div&gt</span> tags within the body section.</li>
+                <li>Style these divs usign their tag name (that is, div).</li>
+                <p>Use the following CSS.</p>
+                <code style="margin-left:15px;">
+                    div {
+                    border:1px solid black;
+                    height:200px;
+                    width:200px;
+                    }
+                </code>
+            </ol>
+            <p>The divs will appear on the browser as shown in the image below.</p>
+        </div>
+
+
+
+        <img src="divs3.jpg" style="margin-left:25px; border-radius:15px;" />
+        <br /><br />
+        <div id="note">
+            <div id="noteImage">
+                <img src="note.png" />
+            </div>
+            <div id="noteText">
+                <b>About CSS Display Property</b><br />
+                CSS display property is just that. It helps you display the elements in certain manner. It can also be used to hide the element, if required.
+                The display property can take 4 different values: block, inline-block, flex and none (none hides the element altogether). For now, we'll just look at flex.
+            </div>
+        </div>
+
+        <div id="overview">
+            <h2>Make Use of the Flex CSS Property</h2>
+            <p>For these divs to appear side by side, they should be treated as one single element (or one giant div).That is, all 3 of them should be wrapped in a parent div (also known as the wrapper or container div). </p>
+
+            <ol>
+                <li>Create a div with id="container" and move the previously created 3 divs into this div.</li>
+                <li>Now set the CSS display property of the div with id="container" as flex as shown in the image. </li>
+                <ul>
+                    <code>
+                        #container {
+                        display:flex;
+                        }
+                    </code>
+                </ul>
+                <li>Save the file and open it using a web browser. </li>
+
+            </ol>
+            <p>The divs will appear on the browser as shown in the image below.You'll notice that the divs now appear side by side, although the widths of the divs might get affected a bit.</p>
+
+            <img src="divs4.jpg" style="border-radius:15px;" />
+
+            <p>You will probably need to increase the width of the divs to make it look good again. But our job is done: we have successfully placed 3 divs side by side.</p>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="questionMark.jfif" />
+            </div>
+            <div id="noteText">
+                <b>What Did Flex Property Do?</b><br />
+                This is because the div elements take up the entire space horizontally by default. That is, they don't allow other elements - even other divs - to sit beside them. Therefore whatever that follows has to be placed under the div and not beside it.
+                <br /><br />In CSS terminology, divs are known as 'block' elements. Block elements do not allow other elements to sit beside them. But this default behavior of divs can be modified. We will see how this can be done when we create an entire web page's layout later.
+            </div>
+        </div>
+        <p></p>
+
+
+
+    </div>
+
+
+</body>
+</html>

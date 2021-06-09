@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        #customm {
+            border: 0px solid black;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+            #customm p {
+                margin-left: 5px;
+            }
+
+        #custom{
+            border:1px solid black; 
+            width:100%; 
+            margin-top:15px; 
+            border-radius:15px;
+        }
+        #custom p{
+            margin-left:5px;
+        }
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+
+        @media only screen and (max-width:600px) {
+            #container img {
+                width: 100%;
+            }
+
+            #container iframe {
+                width: 100%;
+                height: 360px;
+            }
+
+            #container #customm #note #noteText {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            #overview img{
+                width:80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <h1 id="title">Displaying Your Name Using JSX Variable In React</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to store your name in a jsx variable and display the same on the web browser when the app runs, instead of hard coding it directly into the HTML.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>React app created using create-react-app npm package.</li>
+                <li>JSX variable for storing your name.</li>
+
+
+
+            </ul>
+        </div>
+
+
+
+
+
+        <div id="overview">
+            <h2>How will our app look like?</h2>
+            <p>Our app will look something like this.</p>
+
+            <img src="react13.jpg" style="margin-left:35px; margin-top:5px;" />
+
+            <div id="custom">
+                <p><b>JSX Variables</b><br /><br />React combines HTML, CSS and Javascript into a single unit and allows us to roll out our apps. And since there are no separate spaces for our variables (the JS part) and markups (the HTML part) to reside in, they have to be embedded together. This sort of embedding is brought about by JSX. </p>
+                <p>JSX allows us to write javascript variables within HTML. And this simple app serves as a good example for it. </p>
+                <ul>
+                    <li>JSX variables have to be defined above the return statement of the component.</li>
+                    <li>They are always wrapped within curly {} braces when inside the HTML.</li>
+                </ul>
+
+            </div>
+            <h2>Creating the JSX Variable</h2>
+            <p>In the app.js file, do the following:</p>
+            <ol>
+                <li>Above the return statement of the App function, declare a const variable and assign your name to it.</li>
+                <img src="react14.jpg" style="margin-left:15px; margin-top:5px;" />
+                <li>Within the return statement and inside the <span>&ltdiv&gt</span> insert the following html line: <span>&lth1&gt</span> Hi, My Name is {name} <span>&lt/h1&gt</span>. Make sure you have wrapped the jsx variable name (which contains your name) within curly {} braces.</li>
+                <img src="react15.jpg" style="margin-left:15px; margin-top:5px;" />
+                <li>Save the file. Now you will see your name printed on the browser. Meaning the React DOM evaluated the value stored in the jsx variable and printed it on the screen.</li>
+
+
+            </ol>
+
+            <img src="react16.jpg" style="margin-left:45px; margin-top:5px;" />
+
+
+            <h1 style="text-align: center;">Simple 2 Component Layout Using React</h1>
+            <div id="customm">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/558403013" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+
+
+
+        </div>
+
+
+</body>
+</html>

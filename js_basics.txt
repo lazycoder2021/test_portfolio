@@ -1,0 +1,28 @@
+js intro 
+
+variables (and data types) 
+
+functions 
+
+event listeners 
+
+alert box
+
+console.log
+
+selectors 
+
+objects 
+
+arrays 
+
+conditions and loops 
+
+classes 
+
+
+
+
+
+ 
+

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">How to Create Multiple Divs?</h1>
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>The objective is to create 3 divs. Give each one of them a height and width and color them. </p>
+        </div>
+
+        <div id="overview">
+            <h2>How to Create the Divs?</h2>
+            <p>To create the divs, follow the instructions given below:</p>
+
+            <ol>
+                <li>Create a html page (basically a file with .html extension)</li>
+                <li>Add 3 <span>&ltdiv&gt</span> <span>&lt/div&gt</span> tags within the body section.</li>
+                <li>Give all of these divs the id named 'box' using which they can be styled later. </li>
+                <li>Write one, two and three as content for the 3 divs so that you can identify them easily.</li>
+            </ol>
+            <p>The divs will appear on the browser as shown in the image below.</p>
+        </div>
+
+        <img src="divs.jpg" style="margin-left:25px; border-radius:15px;"/>
+        <div id="overview">
+            <h2>Adding Height, Width and Color to the Divs</h2>
+            
+            <ol>
+                <li>Within the <span>&lthead&gt</span> <span>&lt/head&gt</span>section, add <span>&ltstyle&gt</span> <span>&lt/style&gt tag.</span></li>
+                <li>Within the <span>&ltstyle&gt</span> <span>&lt/style&gt tag, add the following code.</li>
+                <ul>
+                    <code>
+                        #box {
+                        border:1px solid black;
+                        height:200px;
+                        width:200px; 
+                        background-color: red; 
+                        }
+                    </code>
+                </ul>
+                <li>Save the file and open it using a web browser. </li>
+
+            </ol>
+            <p>The divs would be much bigger in size now - but uniformly so - and would be colored red as shown here.</p>
+            <img src="divs2.jpg" style="border-radius:15px;"/>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="questionMark.jfif" />
+            </div>
+            <div id="noteText">
+                <b>Why Didn't The Divs Align Side By Side?</b><br />
+                This is because the div elements take up the entire space horizontally by default. That is, they don't allow other elements - even other divs - to sit beside them. Therefore whatever that follows has to be placed under the div and not beside it.
+                <br /><br/>In CSS terminology, divs are known as 'block' elements. Block elements do not allow other elements to sit beside them. But this default behavior of divs can be modified. We will see how this can be done when we create an entire web page's layout later.
+            </div>
+        </div>
+        <p></p>
+
+        
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 30%;
+                height: 40px;
+                margin-left: 13px;
+                
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+             margin-left: -125px; 
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+
+    <div id="container">
+
+        <h1 id="title">Creating Routes Using Express</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create many routes directing the client to different pages on the server.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>Node and NPM installation</li>
+                <li>Installation of Express NPM package</li>
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How will our Routes look?</h2>
+            <p>/services is basically one of the routes we will be creating.</p><br />
+            <img src="express01.jpg" style="border-radius:15px;" />
+
+
+
+        </div>
+
+
+
+
+        <div id="overview">
+            <h2>How to Create Different Routes Using Express?</h2>
+            <p>Routes represent the locations in which our website's or web app's pages get published.They begin with a '/' in the front. And are followed by the name for that specific route. Example: /contact. '/' alone represents your home page. Here you can publish the page that you want to be rendered by default.</p><p> Now, with a typical website in mind, let's create 4 different routes for displaying home, services, about and contact pages</p>
+
+            <ol>
+
+                <li>Create your express server and have it running at port 3000. </li>
+
+                <p style="margin-left:10px;">To keep things simple, we are not going to deal with any post method here. Our 4 routes will only render pages to the client and not accept any input from them.</p>
+
+                <li>Create 4 app.get() methods in your index.js file.</li>
+                <li>Give different names to the routes. Ex: '/', /services, /about, /contact</li>
+
+
+
+
+            </ol>
+
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+            </div>
+            <div id="noteText">
+                <p style="margin-left:10px;">To keep things simple, we won't be rendering actual html pages, but simple messages using res.send() methods.</p>
+
+            </div>
+        </div>
+
+        <div id="overview">
+            <h2>Display Messages From Configured Routes Using res.send()</h2>
+            <ol>
+                <li>Add res.send() method within each of the app.get() methods you have set up.</li>
+                <li>For the message, you can display something like shown in the 1st image.Something which indicates to you that content is indeed coming from that route.</li>
+                <li>Save the file and run your server.</li>
+            </ol>
+
+        </div>
+
+
+
+        <div id="overview">
+            <h2>Testing Out The New Routes </h2>
+            <p>Once your server is up and running successfully</p>
+            <ul>
+                <li>After the '/' in the URL (which should now be displaying whatever message you configured earlier for the home page), enter the route names you configured one after the other and check whether the messages you configured for them are being displayed correctly. </li>
+            </ul>
+            <p>In our next lesson, we will see how to render an actual html page in a specific route.</p>
+
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+            </div>
+            <div id="noteText">
+                <p style="margin-left:10px;">When it comes to routing, express makes use of what is called 'routers' to do all the routing. app.get() methods are reserved for other things. This example was given just to make you understand the basics of routing.</p>
+
+            </div>
+        </div>
+        <p></p>
+
+
+        <h1 style="text-align: center;">Routes Using Express</h1>
+        <div id="customm">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/558960214" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>

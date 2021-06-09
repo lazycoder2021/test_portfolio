@@ -1,0 +1,9 @@
+1. upload api video 
+
+2. apply border to images 
+
+3. change link colors
+
+
+5. ensure images don't exceed t container 
+

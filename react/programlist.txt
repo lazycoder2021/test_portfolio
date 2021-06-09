@@ -1,0 +1,5 @@
+hello world
+components (+ some jsx) 
+styling 
+greeting 
+ticking digital clock 

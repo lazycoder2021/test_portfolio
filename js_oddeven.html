@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Finding Out Whether a Given Number is Even or Odd</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to allow the user to submit a number and check whether it is even or odd by dividing it by 2.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>Input box to allow the user to enter the number to be checked.</li>
+                <li>Modulos operator (%) to check if the division produces a remainder or not.</li>
+                <li>Alert box to show the result to the user.</li>
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How to Design our Simple Program?</h2>
+            <p>Our html should look something like this:</p>
+            <img src="division.jpg" />
+            <p></p>
+
+            <ul>
+                <li>The input box receives the user's input.</li>
+                <li>The button triggers the division operation. </li>
+                <li>Here's the html code to recreate what's shown in the image.</li>
+                <br />
+                <img src="division_html.jpg" style="border-radius:15px;" />
+
+            </ul>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="note.png" />
+            </div>
+            <div id="noteText">
+                ID attributes help us grab these html elements and manipulate them in javascript based on the user input. ID num helps us to grab the input which the user types in the input box. ID btn helps us grab the button and include within it the formula to check whether the number provided is even or odd.
+            </div>
+        </div>
+
+
+
+        <div id="overview">
+            <h2>How to Grab the User Input using Javascript?</h2>
+            <p>Include your javascript code within <span>&ltscript&gt</span> <span>&lt/script&gt</span> tags just before <span>&lt/body&gt</span> tag .</p>
+
+            <ol>
+                <li>Create a variable num for storing the input value and leave it unassigned for now.</li>
+                <li>Create another variable for storing the html button element.</li>
+                <li>Add an event listener to the button and set it up such that it grabs the number the moment the user enters it in the input box and stores it in the variable num which was previously left unassigned.</li>
+                <li>To check whether you are grabbing the number being input correctly, just console.log it on your browser as shown in the code below.</li>
+                <img src="division_html_1.jpg" style="margin-top: 5px; border-radius:15px;"/>
+            </ol>
+            <p>Now that you are successfully grabbing the user entered number, next step is to check whether it's even or odd.</p>
+        </div>
+
+        
+        <div id="overview">
+            <h2>How to Check if the Number is Odd or Even Using Modulus Operator?</h2>
+            <p>% produces a remainder if the number is not divisible; produces 0 if the number is perfectly divisble.</p>
+            <p>% combined with if-else condition can help us find out if the user input is odd or even.</p>
+            <img src="division_html_2.jpg" style="margin-top: 5px; border-radius:15px;" />
+            
+        </div>
+
+        
+
+
+        <div id="overview">
+            <h2>How to Display the Result to the User?</h2>
+            <p>By making use of js alert box. You simply have to replace the comments above with 2 alert boxes: one for displaying odd number and another for even number. </p>
+            <img src="division_html_3.jpg" style="margin-top: 5px; border-radius:15px;" />
+
+            
+        </div>
+
+    </div>
+
+
+</body>
+</html>

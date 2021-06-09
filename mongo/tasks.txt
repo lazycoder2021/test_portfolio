@@ -1,0 +1,7 @@
+database
+collection
+documents 
+	- single 
+	- many 
+delete collection 
+delete database 

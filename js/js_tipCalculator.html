@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+        @media only screen and (max-width:600px) {
+            #container img {
+                width: 100%;
+            }
+
+            #container iframe {
+                width: 100%;
+                height: 360px;
+            }
+
+            #container #customm #note #noteText {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+
+    <div id="container">
+
+        <h1 id="title">Tip Calculator Using JavaScript</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create a simple tip calculator which takes the bill amount as the input and calculates the tip.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>Input box to get the user input.</li>
+                <li>Select box which allows the user to select the tip percentage based on the type of service provided.</li>
+                <li>Button for performing the tip calculation.</li>
+                <li>Alert box for displaying the output.</li>
+
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How to Design our Simple Program?</h2>
+            <p>Our html should look something like this:</p>
+            <img src="tipcalculator.jpg" style="border-radius:4px;" />
+            <p>Here's the html code to recreate what's shown in the image above.</p>
+
+            <img src="tipcalculatorhtml.jpg" style="border-radius:15px;" />
+        </div>
+
+        <div id="note">
+
+            <div id="noteText">
+                ID attributes help us grab the html elements and manipulate them in javascript. ID billAmount grabs the bill amount entered by the user. ID tipPercentage grabs the tip percentage selected by the user. ID btn grabs the Calculate button and is responsible for invoking the calculation operation (when clicked) via the associated event listener.
+            </div>
+        </div>
+
+
+
+        <div id="overview">
+            <h2>How to Calculate Tip using Javascript?</h2>
+            <p>Include your javascript code within <span>&ltscript&gt</span> <span>&lt/script&gt</span> tags just before <span>&lt/body&gt</span> tag .</p>
+
+            <ol>
+                <li>First create variables for storing the bill amount and the tip percentage, leave them unassigned.</li>
+                <li>Next create a variable for storing the button element.</li>
+                <img src="tipcalculator1.jpg" style="margin-top:5px;" />
+                <li>Add an event listener to the button and set it up such that it the values of billAmount and tipPercentage are captured the moment the user enters them. </li>
+                <img src="tipcalculator2.jpg" style="margin-top:5px;" />
+                <p style="margin-bottom: 5px;">Try console logging the values to ensure you are grabbing them correctly.</p>
+
+                <li>Now to calculate the tip, multiply the bill amount with the tip percentage and divide them by 100. Store the resulting value in a variable called tip (local variable).</li>
+                <li>Use an alert box to output the calculated tip. </li>
+
+                <img src="tipcalculator3.jpg" style="margin-top: 5px; " />
+                <p></p>
+                <img src="tipcalculator4.jpg" style="margin-top: 5px; " />
+
+            </ol>
+
+        </div>
+
+        <h1 style="text-align: center;">Tip Calculator Using JavaScript</h1>
+        <div id="customm">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/558506673" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>

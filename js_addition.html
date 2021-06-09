@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Adding 2 Numbers Using JavaScript</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to allow the user to submit 2 numbers that will be added and the result displayed on screen.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>2 Input boxes to allow the user to enter the numbers to be added.</li>
+                <li>Button to trigger the addition operation once the user enters the numbers.</li>
+                <li>Alert box to show the result to the user.</li>
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How to Design our Simple Program?</h2>
+            <p>Our html should look something like this:</p>
+            <img src="addition.jpg" />
+            <p>Here's the html code to recreate what's shown in the image.</p>
+
+            <img src="html.jpg" style="border-radius:15px;"/>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="note.png" />
+            </div>
+            <div id="noteText">
+                ID attributes help us grab the html elements and manipulate them in javascript based on the user input. ID num1 grabs the first user input and num2 grabs the second. ID btn helps us grab the button element. Within it, we will include the formula for addition.This formula gets invoked when the user presses the button. 
+            </div>
+        </div>
+
+
+
+        <div id="overview">
+            <h2>How to Grab the User Inputs using Javascript?</h2>
+            <p>Include your javascript code within <span>&ltscript&gt</span> <span>&lt/script&gt</span> tags just before <span>&lt/body&gt</span> tag .</p>
+
+            <ol>
+                <li>Create variables num1, num2 for storing 1st and 2nd user inputs. Leave them unassigned for now.</li>
+                <li>Create another variable num3 and leave it unassigned. This will be responsible for storing the result later.</li>
+                <li>Create another variable btn for storing the button element.</li>
+                <li>Add an event listener to the button and set it up such that it grabs the numbers entered by the user and assigns them to variables num1 and num2 (which were previously left unassigned) the moment the button gets clicked.</li>
+                <li>To check whether you are grabbing the numbers being input correctly, just console.log it on your browser as shown in the code below.</li>
+                <img src="addition_1.jpg" style="margin-top: 5px; border-radius:15px;" />
+            </ol>
+            <p>Now that you've grabbed the user entered numbers, next step is to add them and display the result.</p>
+        </div>
+
+        
+        <div id="overview">
+            <h2>How to Add the Numbers and Display the Result?</h2>
+            <p>You just have to add the 2 numbers obtained from the user and store it in the variable num3.</p>
+            <ul>
+                <li>num3 = num1 + num2;</li>
+            </ul>
+            <p>Then display the result stored in the variable num3 using the alert box to the user.</p>
+            <img src="addition_2.jpg" style="margin-top: 5px; border-radius:15px;" />
+            
+        </div>
+
+        
+
+
+        
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        #custom {
+            border: 0px solid black;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+        }
+
+            #custom p {
+                margin-left: 5px;
+                padding:5px;
+            }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 15px;
+           
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+                padding:5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">API Documentation Essentials</h1>
+
+        <p style="margin-left:25px; font-size:20px;">There are many ways in which API documents are structured. Some organizations choose to create elaborate manuals, while others opt for quick start guides. It really comes down what the stakeholders are looking for.</p>
+        <p style="margin-left:25px; font-size:20px;">While API docs might come in different sizes and structures, certain elements are common to all. Let's take a look at such elements that form the crux of every api documentation.</p>
+
+
+        <h2 style="margin-left:25px;">Listing Of Resources</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;">A resource is basically information the client might search for. They get segregated into different categories and are served up when the client makes a request. So it is important that all available resources are listed out.</p>
+
+        </div>
+
+
+        <h2 style="margin-left:25px;">Resource Descriptions</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;"> Without knowing what a resource stands for, developers will have a hard time using them. Therefore API docs always contain resource descriptions. It's enough to write a short description that runs for 3-4 lines.</p>
+
+        </div>
+
+
+        <h2 style="margin-left:25px;">Listing Of Various Endpoints</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px; padding:5px;">A resource can have several endpoints. Make sure all of them get listed. While listing endpoints, do not list the base url. Endpoints alone will suffice.</p>
+        </div>
+
+        <h2 style="margin-left:25px;">Listing Of Parameters Involved</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;margin-bottom:0px;">Parameters help developers to filter out the info being extracted based on their requirements. So ensure all of them = both path and query parameters - get listed.</p>
+
+
+        </div>
+
+        <h2 style="margin-left:25px;">Sample Requests</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;">Practical examples of sample requests is a must. They serve as a good starting point. </p>
+        </div>
+
+        <h2 style="margin-left:25px;">Sample Responses</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;">Sample requests should be accompanied by appropriate sample responses.  </p>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>

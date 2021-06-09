@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 5px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:35%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+        @media only screen and (max-width:600px) {
+            #container img {
+                width: 100%;
+            }
+
+            #container iframe {
+                width: 100%;
+                height: 360px;
+            }
+
+            #container #customm #note #noteText {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+
+
+    <div id="container">
+
+        <h1 id="title">Simple Calculator Using JavaScript</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create a simple calculator that allows the user to enter 2 numbers and perform addition, subtraction, multiplicaton or division. </p>
+            <p>What's needed:</p>
+            <ul>
+                <li>2 Input boxes to allow the user to enter the numbers.</li>
+                <li>Select box that allows the user to select the operation to be performed.</li>
+                <li>Button to trigger the user selected operation (addition, subtraction, multiplication or division).</li>
+                <li>Alert box to show the result to the user.</li>
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How to Design our Simple Program?</h2>
+            <p>Our html should look something like this:</p>
+            <img src="simpleCalcy.jpg" />
+            <p>Here's the html code to recreate what's shown in the image.</p>
+
+            <img src="simpleCalcyHTML.jpg" style="border-radius:15px;" />
+        </div>
+
+        <div id="note">
+            <div id="noteText">
+                ID attributes help us grab the html elements and manipulate them in javascript based on the user input. ID num1 grabs the first user input and num2 grabs the second. ID op helps us grab the operation which the user selects. ID btn helps us grab the button element. Within it, we will include the formula for the 4 operations. When the user presses the button, the appropriate formula for the operation gets invoked.
+            </div>
+        </div>
+
+
+
+        <div id="overview">
+            <h2>How to Grab the User Inputs using Javascript?</h2>
+            <p>Include your javascript code within <span>&ltscript&gt</span> <span>&lt/script&gt</span> tags just before <span>&lt/body&gt</span> tag .</p>
+
+            <ol>
+                <li>Create variables num1, num2 for storing 1st and 2nd user inputs. Leave them unassigned for now.</li>
+                <li>Create another variable op and leave it unassigned. This will store the operation which the user selects.</li>
+                <li>Create another variable btn for storing the button element.</li>
+                <li>Add an event listener to the button and set it up such that it grabs the numbers entered by the user along with the selected operation and assigns them to variables num1, num2 and op respectively (which were previously left unassigned) the moment the button gets clicked.</li>
+                <li>To check whether you are grabbing the numbers and the operation selected by the user correctly, just console.log them on your browser as shown in the code below.</li>
+                <img src="simpleCalcyJS1.jpg" style="margin-top: 5px; border-radius:15px;" />
+            </ol>
+            <p>Now that you've grabbed the user entered details, next step is to calculate and display the result.</p>
+        </div>
+
+
+        <div id="overview">
+            <h2>How to Execute the Appropriate Operation Based on User Selection?</h2>
+            <p>Our calculator by default should support 4 operations: that is, addition, subtraction, multiplication and division. And based on the user selection (which as we have seen, gets stored in the variable op), the appropriate operation should get executed. How do we achieve this in JavaScript? </p>
+            <p>By making use of Switch condition statement.The Switch condition statement helps us to select one option from a list of options and is therefore perfect for our simple calculator where the user is expected to select one arithmetic operation from a list of operations.</p>
+
+
+            <img src="simpleCalcyJS2.jpg" style="margin-top: 5px; border-radius:15px;" />
+
+            <p>As you can see, we pass the op variable (which contains the user selected arithmetic operation) to the switch statement and have listed all our available calcy operations within it. Now the switch statement compares the value of the op variable it receives with the operations listed within {} and executes the operation (or case) that matches the value stored within variable op. </p>
+
+            <p>Note that we are just console.logging the result for now for testing our program. Later, this can be replaced with an alert box to show the result to the user. </p>
+        </div>
+
+        <div id="note">
+            <div id="noteText">
+                We can also make use of if-else condition statement to create the arithmetic operations for our calculator, though the Switch statement fits our program's requirements perfectly.
+            </div>
+        </div>
+
+
+        <h1 style="text-align: center;">Simple Calculator Using JavaScript</h1>
+        <div id="customm">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/558502884" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+</html>

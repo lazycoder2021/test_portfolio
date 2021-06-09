@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        #custom {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+        }
+
+            #custom p {
+                margin-left: 5px;
+                padding:5px;
+            }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+            margin-bottom:10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Anatomy of a REST API</h1>
+        <div id="overview">
+            
+            <p>Going back to the open weather api example we used to 'get' weather data of a city, our URL looked like this</p>
+            <img src="api_1.jpg" style="border:1px solid black; margin-top:5px;"/>
+            <p>Let's break down this URL to understand REST API URL conventions.</p>
+            <p>A REST API URL consists of: </p>
+            <ul>
+                <li><b> URL</b> - that part of the url which remains unchanged for all api requests. Usually a sub domain of the comapany reserved specifically for handing out the apis. In most cases, it ends with a .com or .org (like sub domains do) but in some cases, it ends with the api version number (like in the case of open wether api).  </li>
+                <li><b>Endpoint</b> - that part of the url before the '?' mark but after the base url. Endpoint bascially lays down the path for accessing the resource.</li>
+                <li><b>Resource</b> - the information being accessed. In this case, it's the weather. Usually indicated or hinted by the endpoint itself.</li>
+                <li><b>Query Parameters</b> - the part of the url after the '?' mark written in key: value pairs (q=london).</li>
+                <li><b>API KEY or ID </b>- a unique key or ID which authenticates the api subscriber (this is also a query parameter indicated by the 'appid' key.)</li>
+
+            </ul>
+            <p>These parts put together make up the REST API request. And what you get back on the screen when the url gets executed is the raw response which is later given a UI and presented to the client. In fact, you also have a number of UI based tools to make requests that make the lives of developers easier as they build and test the apis. POSTMAN is one such popular tool.</p>
+        </div>
+
+
+        
+
+    </div>
+
+
+</body>
+</html>

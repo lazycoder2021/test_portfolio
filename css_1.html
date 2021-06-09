@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">What are DIVs in CSS?</h1>
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Divs are basically square shaped blocks that help you decide the webpage's layout or design. Every element you see on the browser is a div with a certain height and a width. Divs can also be shaped differently. They can even be turned into perfect circles. By default, though, they appear as squares or boxes on the screen. </p>
+        </div>
+
+        <div id="overview">
+            <h2>How to Create a Div?</h2>
+            <p>To create a div, follow the instructions given below:</p>
+
+            <ol>
+                <li>Create a html page (basically a file with .html extension)</li>
+                <li>Add <span>&ltdiv&gt</span> <span>&lt/div&gt</span> tags within the body section.</li>
+                <li>Add some text between the tags like this: <span>&ltdiv&gt</span> Good Morning<span>&lt/div&gt</span> </li>
+                <li>Save the file and open it using a web browser.</li>
+            </ol>
+            <p>That's it! You just successfully created a div - the building block of web design.</p>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="note.png" />
+            </div>
+            <div id="noteText">
+                Your div will not appear as a box, but simply as the text you wrote within <span>&ltdiv&gt</span> <span>&lt/div&gt</span>. This is because divs aren't visible by default. You have to add style to them to make them visible.
+            </div>
+        </div>
+
+        <div id="overview">
+            <h2>How to Add Style to a Div?</h2>
+            <p>Styling refers to the cosmetic modifications done to change appearance of otherwise plain HTML elements.</p>
+            <p>To add style to a div, follow the instructions given below:</p>
+            <ol>
+                <li>Within the <span>&lthead&gt</span> <span>&lt/head&gt</span>section, add <span>&ltstyle&gt</span> <span>&lt/style&gt tag.</span></li>
+                <li>Within the <span>&ltstyle&gt</span> <span>&lt/style&gt tag, add the following code.</li>
+                <ul>
+                    <code>
+                        div {
+                        border:1px solid black;
+                        }
+                    </code>
+                </ul>
+                <li>Save the file and open it using a web browser. </li>
+
+            </ol>
+            <p>You will notice that your text is now wrapped within a rectangular box as wide as the width of your browser.</p>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="questionMark.jfif" />
+            </div>
+            <div id="noteText">
+                <b>What exactly happened?</b><br />
+                You just gave your div a border of 1px thickness and colored it black. In css the styling has to go within {} braces. And the property and its value should be separated by a '<b>:</b>' Every property:value pair should be terminated by a '<b>;</b>'</b>'
+            </div>
+        </div>
+
+
+        <div id="overview">
+            <h2>How to Postion a Div?</h2>
+            <p>Your div will appear a bit misplaced at the moment. To fix this, you have to position your div correctly. </p>
+            <p>To position your div, follow the instructions given below: </p>
+
+            <ol>
+                <li>Add <code>'text-align:center'</code> property to the div's styling code within <span>&ltstyle&gt</span> <span>&lt/style&gt tags.
+                <li>Save the file and open it using a web browser.</li>
+                
+
+            </ol>
+            <p>Technically, we just positioned or aligned the text within the div and not the entire div.</p>
+            <p>More on div positioning later.</p>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

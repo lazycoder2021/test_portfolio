@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Hello World Using React</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create a simple react app that prints the words 'hello world' on the browser.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>Node Installation</li>
+                <li>NPM Package Installation</li>
+                
+                
+            </ul>
+        </div>
+
+        
+       
+
+
+        <div id="overview">
+            <h2>How to Create the Hello World React App?</h2>
+            <p>We will use create-react-app npm package for creating our react app.</p>
+
+            <ol>
+                <li>Open up command line interface and cd into the folder where you want create your react app.</li>
+                <li>Type the following command:<code style="margin-left:12px; margin-top:5px; font-size:20px;">npx create-react-app myfirstreactproject</code></li>
+
+                <p style="margin-left:15px; margin-top:10px;">myfirstreactproject is the name of the react app we are going to create.</p>
+                <img src="react2.jpg" style="margin-top:5px; margin-left:10px;" />
+                <li>Once the commend successfully executes itself, you will be instructed to do the following.</li>
+                <img src="react3.jpg" style="margin-top:5px; margin-left:10px;" />
+
+
+                <li>As suggested, cd into the myfirstreactproject folder and then execute <code>npm start</code> command.</li>
+                <li>React app you just created will automatically open up on your browser on the port 3000.</li>
+                <li>Your react app will look like this.</li>
+
+                <img src="react4.jpg" style="margin-top: 5px;margin-left:10px; " />
+                <p>This is the default screen for all react apps. All we have to do is modify it so that it displays 'hello world'. </p>
+                <li>A js file by name 'app.js' is responsible for displaying the default screen.</li>
+                <li>app.js file can be found in myfirstreactproject folder within the src sub folder.</li>
+                <li>Open the app.js file. It will look like as shown below.</li>
+                <img src="react5.jpg" style="margin-top: 5px;margin-left:10px;" />
+                <li>Remove everything written in-between <span>&ltdiv className="App"&gt</span> and <span>&lt/div&gt</span></li>
+                <li>Replace them with <span>&lth1&gt</span> Hello World <span>&lt/h1&gt</span>. Save the file.</li>
+                <img src="react0.jpg" style="margin-top: 5px;margin-left:10px;" />
+                <li>Your react app will now be displaying the words 'Hello World' on the browser.</li>
+            </ol>
+            
+        </div>
+
+        
+        
+        
+
+
+        
+    </div>
+
+
+</body>
+</html>

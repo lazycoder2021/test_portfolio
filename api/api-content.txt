@@ -1,0 +1,9 @@
+1. resource description 
+
+2. generic endpoint (mostly get) 
+
+3. parameters involved
+
+4. request/response to generic endpoint 
+
+5. list of endpoints (as separate pages) (with their own parameters)

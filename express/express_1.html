@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 30%;
+                height: 40px;
+                margin-left: 13px;
+                
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+             margin-left: -125px; 
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+    <div id="container">
+
+
+        <h1 id="title">Creating a Simple Server Using Express</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create a simple server that renders 'hello world' on the browser when it is run.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>Node and NPM installation</li>
+                <li>Installation of Express NPM package</li>
+            </ul>
+        </div>
+
+        <div id="overview">
+            <h2>How will our Simple Server look?</h2>
+            <p>Our simple server will run on port 3000 and will render 'hello world' on the browser.</p><br />
+            <img src="server.jpg" style="border-radius:15px;" />
+
+
+
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+                <img src="note.png" />
+            </div>
+            <div id="noteText">
+                You should have installed node (as well as Npm module) in your system for the program to work.
+            </div>
+        </div>
+
+
+
+        <div id="overview">
+            <h2>How to Create the Server Using Express?</h2>
+            <p>Create a separate folder called simpleServer and within it do the following:</p>
+
+            <ol>
+
+                <li>Using command line navigate into the simpleServer folder and run the following command: </li>
+                <code style="margin-left:15px;font-size:20px;">npm install express</code>
+                <p style="margin-left:10px;">Doing so will install express in your working folder</p>
+                <img src="express.jpg" style="margin-left:10px;" />
+                <li>Now create a file called index.js. This is where you will code your server.</li>
+                <li>Import the express module you just installed within the file and store it in a variable called 'express'.</li>
+                <li>Transfer all the properties of express to another variable called 'app'.</li>
+                <img src="express1.jpg" style="margin-top: 10px; margin-left:10px;" />
+                <p style="margin-left:10px;">Variable app now basically represents our server.</p>
+
+
+            </ol>
+
+        </div>
+
+        <div id="overview">
+            <h2>How to Designate a Port Number for our Server?</h2>
+            <p>Our server has to run (or listen in node terminology) on some port for it to be able to read requests from clients and send appropriate responses back to them.</p>
+            <p>We can designate a port to our server by writing the following code.</p>
+            <img src="express2.jpg" style="margin-top: 10px; margin-left:10px;" />
+            <p>app inherits the properites of express module. Therefore now it has access to '.listen' method of express. Using this we are passing in 3000 as the port number on which the server should be run. What follows the port number is a function that gets executed everytime a client tries to acccess our server on the given port. In our case, the function simply console.logs the words 'server running @ 3000' for now. </p>
+        </div>
+
+        <div id="note">
+            <div id="noteImage">
+
+            </div>
+            <div id="noteText">
+                <p style="margin-left:10px;">It is not necessary that the port number should be followed by a function. It can even be left empty. The code provided here is just an universal example which helps us understand that our server is up and running.</p>
+                <p style="margin-left:10px;">The function takes in 2 parameters: request and response. Servers receive requests and send responses. These are being passed as the parameters to the function.</p>
+                <p style="margin-left:10px;">The function itself is a fat arrow modern javascript function. You can also use the old javascript function syntax, though it is no longer recommended.</p>
+            </div>
+        </div>
+
+        <div id="overview">
+            <h2>What do we want our Server to do? </h2>
+            <p>We want our server to display the words 'hello world' on the browser. How can we accomplish this?</p>
+            <ul>
+                <li>Server operations (or methods) in node can be broadly classified into 2 types: get and post. get is used whenever we want our server to get a page and display the same to the client. post is used whenever we want the client to submit (or post) something to the server.</li>
+                <li>Be it get or post, the syntax followed is pretty much same to app.listen method we just created. Only difference is that the app.listen gets replaced by app.get or app.post (depending on our requirements) and the port number is replaced by the route which we want the server to serve to the client.</li>
+            </ul>
+            <p>In our case, since we just want to send across the words 'hello world' to the client's browser, we'll be making use of the app.get() method.</p>
+            <img src="express3.jpg" style="margin-top:10px;" />
+            <p>'/' always represents the home route. Which in our case is localhost:3000. And since we are not going to be receiving anything from the client here and only going to send a response, we will make use of the .send method that belongs to the express module and is responsible for sending messages to the client.</p>
+            <p>So our server is now ready to send the words 'hello world' to anyone who wishes to access it on localhost:3000</p>
+            <p>Now how do we run our server?</p>
+        </div>
+
+
+        <div id="overview">
+            <h2>How to Run our Simple Server? </h2>
+            <p>It's simple. All you have to do is navigate to the simpleServer folder using command line and execute the following code.</p>
+            <code style="margin-left:10px; font-size:20px; ">node index.js</code><br />
+            <img src="server.jpg" style="border-radius:15px; margin-top:20px;" />
+
+
+            <p>And you'll see that our server is up and running now, displaying the words 'hello world' on the browser and the message 'server is running @ 3000' in the console window.</p>
+
+
+        </div>
+
+        <h1 style="text-align: center;">Simple Server Using Express</h1>
+        <div id="customm">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/558958168" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        #custom{
+            border:1px solid black; 
+            width:100%; 
+            margin-top:15px; 
+            border-radius:15px;
+        }
+        #custom p{
+            margin-left:5px;
+        }
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: gainsboro;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">Simple 2 Component Layout Using React</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create a basic 2 component layout using react. One representing header. And another the body.</p>
+            <p>What's needed:</p>
+            <ul>
+                <li>React app created using create-react-app npm package.</li>
+                <li>Modification of index.html, index.css and app.js files within the project folder.</li>
+                <li>Google font for styling the font in our react app.</li>
+                
+                
+            </ul>
+        </div>
+
+        
+       
+
+
+        <div id="overview">
+            <h2>How will our layout look like?</h2>
+            <p>Our layout will look something like this.</p>
+
+            <img src="react6.jpg" style="margin-left:35px; margin-top:5px; height:400px; width:300px; border-radius:15px;" />
+
+            <div id="custom">
+                <p>Components are 'parts' of your react app. It's a bunch of html tags thrown together (with or without variables) that make up different sections of your app. In our simple app, we'll be using 2 of them. One for displaying the header (hello world) and another for displaying the body (para text). </p>
+                <p>To keep things simple, we will be displaying only one html element per component. In reality, a component can contain many html elements.</p>
+                <p>
+                    First we will:
+                    <ol><li>Create the HTML tags <span>&lth1&gt</span> and <span>&ltp&gt </li> <li>Style them and then</li> <li> Convert them into react header and body components.</span></li></ol>
+            </div>
+            <h2>Creating HTML elements and Styling Them</h2>
+            <p>In the app.js file, do the following:</p>
+            <ol>
+                <li>Delete everything written in-between <span>&ltdiv className="App"&gt</span> and <span>&lt/div&gt</span></li>
+                <li>Add <span>&lth1&gt</span> Hello World <span>&lt/h1&gt</span>. Then add <span>&ltp&gt</span><span>&lt/p&gt</span> tag with lorem ipsum text in-between.</li>
+
+                <p style="margin-left:10px;">Now style them so that these elements reflect the background colors shown in the first image.</p>
+
+                <li>Easiest way to style html elements in react is through index.css file present in the same src folder as the app.js file.</li>
+                <li>So access the index.css file and add the following code: </li>
+                <img src="react7.jpg" style="margin-top:10px; margin-left:10px;" />
+                <li>You'll notice that the html elements have changed considerably. Still, they won't exactly reflect our first image. This is because we haven't yet applied the google font 'Abel'. </li>
+                <li>The process of applying of google fonts remains the same in react. You just have to add the respective google font's cdn link in the index.html file (just above the react app title tag within the head section) as shown below </li>
+                <img src="react8.jpg" style="margin-left:10px;" />
+                <li>Next, in the index.css, replace already existing font-family property with the google font's name (Abel). </li>
+                <img src="react9.jpg" style="margin-left:10px;margin-top:10px;" />
+            </ol>
+            <p>Now the app should perfectly reflect what's shown in the first image.</p>
+            <div id="custom">
+                <h2 style="margin-left:10px;">React Component</h2>
+                <p style="margin-left:10px;">React component is basically a custom html element (that encloses within itself several conventional html elements) which react allows its devs to create. Syntax-wise, they are similar to html self-closing tags like  <span>&ltimg/&gt</span> and <span>&ltinput/&gt</span> box. Naming is left to our choice as long as react rules are followed. But they should always begin with a capital letter.</p>
+                <p style="margin-left:10px;">Components are of 2 types: functional and class. We will be dealing only with functional components here. Our simple app will have 2 components: <span>&ltHeader/&gt</span> and <span>&ltBody/&gt.</span>
+                <p style="margin-left:10px; margin-bottom:5px;">Our App.js itself is a component responsible for rendering the entire react app. Meaning all other sub components within the app - like the ones we are about to create - have to be placed inside the App component for them to be rendered on the browser. If you check out index.js file, you'll see that <span>&ltApp/&gt has been placed inside the ReactDOM.render() method.</span> </p>
+            </div>
+            <h2>Converting H1 Element into React Header Component</h2>
+            <p>Components as they usually contain a collection of html elements are written in separate files. We will be following the same convention here, though our components will only contain one html element each.</p>
+            <p>To create the Header component, follow the instructions given below:</p>
+            <ol>
+                <li>Create a file called 'Header.js' within the src folder.</li>
+                <li>Create a component similar to the app component. Basically a function which has to return something.</li>
+                <li>That something in our case is our <span>&lth1&gt</span> Hello World <span>&lt/h1&gt</span> html element.</li>
+                <li>Finally you will have to export the Header function you just created. Only then will you be able to import it (or include it) in your app component.</li>
+
+
+            </ol>
+            <p>Your Header Component should look as follows:</p>
+            <img src="react10.jpg" />
+
+            <h2>Converting P Element into React Body Component</h2>
+            <p>To create the body component, follow the instructions given below:</p>
+            <ol>
+                <li>Create a file called 'Body.js' within the src folder.</li>
+                <li>Create a component like you did before, only this time replace h1 with p tag and include the lorem text.</li>
+                <li>Again don't forget to export the Body component (or function) you just created.</li>
+            </ol>
+
+            <h2>Importing Header and Body Components into the App Component</h2>
+            <p>Finally to ensure the newly created components render on the browser, you have to include (or import) them into the App component:</p>
+            <ol>
+                <li>Open up the App.js file.</li>
+                <li>Within the App() function and within the App div, include the newly created components as shown below.</li>
+                <img src="react11.jpg" style="margin-top:10px; margin-left:10px;"/>
+                <li>The moment you add the components, they should get imported at the top of the App.js file automatically as shown. If not, you will have to add them manually as shown in the image.</li>
+                <img src="react12.jpg" style="margin-top:10px; margin-left:10px;" />
+                <p style="margin-left:10px;">While importing the components, you will have to call them by their names without the tags. And you should also give the exact location of the file with respect to file from which it is being called. In our case './' indicates the current folder, since both the files reside with the same src folder.</p>
+            </ol>
+        </div>
+
+        
+        
+        
+
+
+        
+    </div>
+
+
+</body>
+</html>

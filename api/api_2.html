@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        #custom {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+        }
+
+            #custom p {
+                margin-left: 5px;
+                padding:5px;
+            }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <h1 id="title">Exploring a Free Weather API</h1>
+        <div id="overview">
+            <p>The best way to start learning about apis is to explore one on your own. </p><p>A good place to start would be https://openweathermap.org/ . Open weather API, as it is popularly known as, provides a bunch of apis that provide information on the weather conditions of places across the globe. Now if you've ever woundered how some browsers display your local weather conditions using little widgets, the answer is using apis like these. </p>
+            <p>Open weather api has a free edition you can use for testing the api. But first, you have to subscribe to the service. On you register yourself, you will be provided with an API KEY using which you can try out their apis.</p>
+            <p>But before you do I would suggest installing the JSON formatter chrome extension on your browser, because this will simplify the appearance of the response.</p>
+        </div>
+
+
+        <h2 style="margin-left:25px;">Trying Out Open Weather API</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;">Login to the website using your credentials and, </p>
+            <ol>
+                <li>Click 'API' on the navigation menu. </li>
+                <li>Under the Current Weather Data section, click API doc.</li>
+                <li>Observe some 'Example of API Calls' and their responses, get a feel of the api.</li>
+                <li>Finally, try the first one (getting weather condition By city name) out on your own.</li>
+                <li>It's quite simple. Copy the link and replace the API KEY placeholder with your API KEY value, and city name placeholder with the name of a valid city as shown in the image.</li>
+                <img src="api_1.jpg" style="margin-top:10px;" />
+                <li>Now paste the url in your browser and observe the response you get.</li>
+            </ol>
+        </div>
+
+        <h2 style="margin-left:25px;">What Did You Just Do? </h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px; padding:5px;">You performed a simple REST API GET operation and got the resource you were looking for.</p>
+        </div>
+
+        <h2 style="margin-left:25px;">Observe the Response Carefully and Understand It</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;margin-bottom:0px;">Most important of all would be the main section - which displays max temp, min temp, feels like, humidity - that is filled with data characteristic of weather widgets. Therefoee has been given the name 'main'. </p>
+            <img src="api_2.jpg" style="margin-top:10px;margin-bottom:20px; margin-left:10px;" />
+
+        </div>
+
+        <h2 style="margin-left:25px;">In Real World Scenario</h2>
+        <div id="overview" style="border:1px solid black; border-radius:15px;">
+            <p style="margin-left:10px;">A developer would create a user interface for displaying the obtained response to the client (user). </p>
+        </div>
+
+        <p style="margin-left:25px;font-size:20px;">This is how api(s) works.But get is not the only operation developers can perform using api(s). There's post, put and delete too. We will see this later.</p>
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>

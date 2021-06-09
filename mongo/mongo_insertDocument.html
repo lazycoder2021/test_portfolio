@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Abel;
+            background-color: honeydew;
+        }
+
+        #custom {
+            border: 1px solid black;
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 5px;
+           
+        }
+
+            #custom p {
+                margin-left: 5px;
+                padding:5px;
+            }
+
+        code{
+            font-size:16px; 
+            
+            
+        }
+
+        ol li {
+            margin-top:5px; 
+        }
+
+        #container {
+            max-width: 900px;
+            border: 3px dashed black;
+            border-radius: 25px;
+            height: auto;
+            margin: auto;
+            background-color: honeydew;
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        #overview {
+            margin: 25px;
+        }
+
+            #overview p {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+        li {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #note {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            margin-left: 25px;
+            border-radius: 15px;
+            height: auto;
+            display: flex;
+        }
+
+            #note img {
+                width: 50%;
+                height: 70px;
+                margin-left: 13px;
+                border-radius: 50px;
+            }
+
+            #noteImage{
+                width:25%;
+                
+            }
+
+        #noteText{
+             font-size:20px; 
+        }
+
+        #navbar {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #nav-items {
+            display: flex;
+        }
+
+            #nav-items h3 {
+                margin: 8px;
+                font-weight: 100;
+            }
+
+        @media only screen and (max-width:600px) {
+            #container img {
+                width: 100%;
+            }
+
+            #container iframe {
+                width: 100%;
+                height: 360px;
+            }
+
+            #container #customm #note #noteText {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            #overview img {
+                width: 89%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+        </div>
+
+        <div id="nav-items">
+            <h3><a href="../index.html">Home</a></h3></a>
+            <h3><a href="../about.html">About</a></h3>
+            <h3><a href="../contact.html">Contact</a></h3>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <h1 id="title">Inserting Documents into a Collection Using MongoDB</h1>
+
+
+
+        <div id="overview">
+            <h2>Overview</h2>
+            <p>Objective is to create and insert 2 documents into a collection using MongoDB shell.</p>
+            <p>Documents are data records written in key: pair values (just like JSON).</p>
+            <p>Documents are written in BSON language (JSON variant that is encodable).</p>
+
+        </div>
+
+
+
+
+        <div id="overview">
+            <h2>How to Insert Documents into a Collection?</h2>
+            <p>Follow the instructions given below:</p>
+
+            <ol>
+
+                <li>In the mongo shell, access the database into which you wish to add the 2 documents</li>
+
+
+                <img src="mongo3.jpg" style="margin-top:5px; margin-left:10px;" />
+
+
+                <li>First you have to access the collection into which the documents are to be added as shown below:</li>
+                <img src="mongo6.jpg" style="margin-top:5px; margin-left:10px;" />
+                <li>Next you have tack onto the collection, the insert command as shown below (using .) </li>
+                <img src="mongo7.jpg" style="margin-top:5px; margin-left:10px;" />
+                <ul>
+                </ul>
+
+                <li>The document data to be inserted goes inside the brackets. </li>
+                <ul>
+                    <li style="list-style:none;">The format in which the data should be written is shown in the image below.</li>
+                    <li style="list-style:none;"><img src="mongo9.jpg" style="margin-top: 5px;margin-left:10px; " /></li>
+                    <li style="list-style:none;">The format is same as formatting json data.  </li>
+                    <li style="list-style:none;">Every record goes within curly {} braces. </li>
+                    <li style="list-style:none;">And every key:value pair is separated by a comma (','). </li>
+                    <li style="list-style:none;">Both key and value should be wrapped within single or double quotes. </li>
+                    <li style="list-style:none;">If the record was submitted successfully, you will get a success message. </li>
+
+                </ul>
+                <li><b>In case of inserting multiple documents:</b> Multiple documents should be treated as array of objects. </li>
+                <ul>
+
+                    <li>That is, every document would be wrapped in curly {} braces </li>
+                    <li>Seperated from each other by a comma (,)</li>
+                    <li>And all of them in turn will be placed inside an array using [] brackets.</li>
+                    <img src="mongo11.jpg" style="margin-top:5px;margin-left:15px;" />
+                </ul>
+
+
+
+
+
+            </ol>
+
+
+
+
+
+
+        </div>
+
+        <h1 style="text-align: center;">Inserting Documents into a Collection Using MongoDB</h1>
+        <div id="customm">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/560309741" width="900" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>
+

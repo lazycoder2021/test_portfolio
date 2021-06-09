@@ -1,0 +1,5 @@
+APIS 
+
+1. links which contain and transfer -- > either to internal server or external server
+
+3. basically interact with servers using xml httprequest (ajax) 
